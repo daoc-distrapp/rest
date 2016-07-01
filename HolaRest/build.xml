@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="HolaRest" default="default" basedir=".">
-    <description>Builds, tests, and runs the project HolaRest.</description>
+<project name="Rest" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Rest.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
