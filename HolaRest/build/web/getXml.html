@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GET</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function rest() {
+                var url = "http://localhost:8080/HolaRest/hola/pruebasget/xml";
+                var client = new XMLHttpRequest();
+                client.open("GET", url, false);
+                client.setRequestHeader("Accept", "application/xml");
+                client.send(null);
+                var obj = client.responseXML;
+                document.write(obj.getElementsByTagName("s")[0].innerHTML + '<br/>');
+                document.write(obj.getElementsByTagName("i")[0].innerHTML + '<br/>');
+                document.write(obj.getElementsByTagName("d")[0].innerHTML + '<br/>');
+            }
+        </script>
+    </head>
+    <body>
+        <h1>GET pide application/xml</h1>
+        <button onclick="rest()">REST</button>
+    </body>
+</html>

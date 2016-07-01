@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GET</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function rest() {
+                var url = "http://localhost:8080/HolaRest/hola/pruebasget/otro";
+                var client = new XMLHttpRequest();
+                client.open("GET", url, false);
+                client.setRequestHeader("Accept", "text/plain");
+                client.send(null);
+                document.write(client.responseText);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>GET pide tet/plain</h1>
+        <button onclick="rest()">REST</button>
+    </body>
+</html>

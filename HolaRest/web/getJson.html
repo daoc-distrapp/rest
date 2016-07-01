@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GET</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function rest() {
+                var url = "http://localhost:8080/HolaRest/hola/pruebasget/json";
+                var client = new XMLHttpRequest();
+                client.open("GET", url, false);
+                client.setRequestHeader("Accept", "application/json");
+                client.send(null);
+                var obj = JSON.parse(client.responseText);
+                document.write(JSON.stringify(obj, null, '<br/>'));
+                document.write(obj['s'] + '<br/>');
+                document.write(obj['i'] + '<br/>');
+                document.write(obj['d'] + '<br/>');
+            }
+        </script>
+    </head>
+    <body>
+        <h1>GET pide application/json</h1>
+        <button onclick="rest()">REST</button>
+    </body>
+</html>
