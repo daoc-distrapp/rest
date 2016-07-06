@@ -26,7 +26,7 @@ public class RecursosGet {
     
     @GET
     @Path("otro")    
-    @Produces("number/double")//este tipo es inventado. El método debe devolver String
+    @Produces("minumero/real")//este tipo es inventado: el método debe devolver String o falla el conversor
     public String getStringNumberDouble() {
         return Double.toString(Math.random());
     }    
